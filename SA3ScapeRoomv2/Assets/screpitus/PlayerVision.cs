@@ -2,27 +2,33 @@ using UnityEngine;
 
 public class PlayerVision : MonoBehaviour
 {
-    public Transform visorOrigem; // A câmera ou posição dos olhos
+    public Transform visorOrigem; // A cï¿½mera ou posiï¿½ï¿½o dos olhos
     public float distanciaVisao = 10f;
     public LayerMask layerObstaculos; // Camada para paredes/objetos
+    public HeandScript heand;
     void Update()
     {
-        // 1. Define a direção do raio (frente do player)
+        // 1. Define a direï¿½ï¿½o do raio (frente do player)
         Vector3 direcao = visorOrigem.forward;
 
-        // 2. Armazena informações da colisão
+        // 2. Armazena informaï¿½ï¿½es da colisï¿½o
         RaycastHit hit;
 
-        // 3. Lança o raio (Raycast)
+        // 3. Lanï¿½a o raio (Raycast)
         if (Physics.Raycast(visorOrigem.position, direcao, out hit, distanciaVisao, layerObstaculos))
         {
             // O raio atingiu algo
             Debug.DrawLine(visorOrigem.position, hit.point, Color.red);
             Debug.Log("Olhando para: " + hit.collider.name);
+            if(hit.collider.name == "CaixaDeAtividades"){
+
+                heand.coletarAtividades();
+
+            }
         }
         else
         {
-            // O raio não atingiu nada
+            // O raio nï¿½o atingiu nada
             Debug.DrawLine(visorOrigem.position, visorOrigem.position + direcao * distanciaVisao, Color.green);
         }
     }

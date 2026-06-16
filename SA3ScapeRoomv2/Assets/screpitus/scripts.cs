@@ -5,6 +5,7 @@ public class scripts : MonoBehaviour
     public GameObject CloseDoorBox;
     public Animator doorAnimator;
     public Transform cameraTransform;
+    public GameObject pontoDeEntrada;
 
 
     [SerializeField] float moveSpeed = 10f;
@@ -29,6 +30,12 @@ public class scripts : MonoBehaviour
             Debug.Log("Objeto correto entrou!");
             doorAnimator.SetInteger("StateDoor", 4);//porta fechando
             Destroy(other.gameObject);
+        }
+
+        if (other.CompareTag("clinicDoor"))
+        {
+            Debug.Log("entramos na clinica");
+            transform.position = pontoDeEntrada.transform.position;
         }
     }
 
