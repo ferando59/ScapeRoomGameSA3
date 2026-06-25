@@ -21,7 +21,7 @@ public class PlayerVision : MonoBehaviour
         {
             // O raio atingiu algo
             Debug.DrawLine(visorOrigem.position, hit.point, Color.red);
-            Debug.Log("Olhando para: " + hit.collider.name);
+            //Debug.Log("Olhando para: " + hit.collider.name);
            
 
 
