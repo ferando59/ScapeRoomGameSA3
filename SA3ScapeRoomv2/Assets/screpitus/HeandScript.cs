@@ -98,11 +98,15 @@ public class HeandScript : MonoBehaviour
 
             if(objHolder != null && objetoNaMaoEUmCard != null){
 
-
+               
+                objetoNaMao.transform.position = objHolder.transform.position;
+                objHolder.GetComponent<paperHolderScripts>().papelFoiIncerido = true;
                 objetoNaMao = null;
                 objetoNaMaoEUmCard = null;
+                
 
-                Debug.Log("pomos o papel no holder");
+
+                //Debug.Log("pomos o papel no holder");
 
                 return;
             }
