@@ -75975,10 +75975,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1298933190532809491, guid: 42cb72f346608de4b9bcd471a7cbfb69, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3316373484527039560, guid: 42cb72f346608de4b9bcd471a7cbfb69, type: 3}
       propertyPath: visorOrigem
       value: 
       objectReference: {fileID: 330585546}
+    - target: {fileID: 4390660194528371835, guid: 42cb72f346608de4b9bcd471a7cbfb69, type: 3}
+      propertyPath: moveSpeed
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 4390660194528371835, guid: 42cb72f346608de4b9bcd471a7cbfb69, type: 3}
       propertyPath: CloseDoorBox
       value: 

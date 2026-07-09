@@ -7,11 +7,15 @@ public class scripts : MonoBehaviour
     public Transform cameraTransform;
     public GameObject pontoDeEntrada;
 
+    private Rigidbody rb;
+
 
     [SerializeField] float moveSpeed = 10f;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -44,7 +48,10 @@ public class scripts : MonoBehaviour
         float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         float yValue = 0;
         float zValue = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
-        transform.Translate(xValue,yValue,zValue);
+        //transform.Translate(xValue,yValue,zValue);
+
+        Vector3 movimento = transform.right * xValue + transform.forward * zValue;
+        rb.MovePosition(rb.position + movimento * moveSpeed * Time.deltaTime);
 
     }
 }
