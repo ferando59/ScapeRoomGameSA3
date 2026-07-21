@@ -5846,11 +5846,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d6b34719bad04d4fb49e54ab5df5ede, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2251081
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d6b34719bad04d4fb49e54ab5df5ede, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 36.35939
+      value: 52.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d6b34719bad04d4fb49e54ab5df5ede, type: 3}
       propertyPath: m_LocalRotation.w
@@ -58586,7 +58586,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: -5495902117074765545, guid: 224f8461b07559d47a3dbe08a1bfd237, type: 3}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1628272156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66845,6 +66845,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: 224f8461b07559d47a3dbe08a1bfd237, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 919132149155446097, guid: 224f8461b07559d47a3dbe08a1bfd237, type: 3}
       propertyPath: m_Name
       value: cone (12)
