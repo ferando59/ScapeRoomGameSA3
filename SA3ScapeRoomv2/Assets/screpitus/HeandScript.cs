@@ -66,6 +66,7 @@ public class HeandScript : MonoBehaviour
 
                         rb.isKinematic = true;
 
+
                     }
                 }
 
@@ -100,6 +101,7 @@ public class HeandScript : MonoBehaviour
 
                
                 objetoNaMao.transform.position = objHolder.transform.position;
+                objetoNaMao.transform.rotation = objHolder.transform.rotation;
                 objHolder.GetComponent<paperHolderScripts>().papelFoiIncerido = true;
                 objetoNaMao = null;
                 objetoNaMaoEUmCard = null;
